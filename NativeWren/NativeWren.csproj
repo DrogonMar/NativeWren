@@ -21,10 +21,5 @@
             <PackagePath>runtimes/linux-x64/native</PackagePath>
             <Pack>true</Pack>
         </Content>
-        <Content Include="$(MSBuildThisFileDirectory)native\win-x64\wren.dll">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-            <PackagePath>runtimes/win-x64/native</PackagePath>
-            <Pack>true</Pack>
-        </Content>
     </ItemGroup>
 </Project>
