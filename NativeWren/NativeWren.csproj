@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Title>NativeWren</Title>
+        <Authors>DrogonMar</Authors>
+        <Description>Wren binds for C#.</Description>
+        <PackageProjectUrl>https://github.com/DrogonMar/NativeWren</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/DrogonMar/NativeWren/blob/main/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/DrogonMar/NativeWren</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>Wren</PackageTags>
+        <Company>DrogonMar</Company>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)native\linux-x64\libwren.so">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>runtimes/linux-x64/native</PackagePath>
+            <Pack>true</Pack>
+        </Content>
+        <Content Include="$(MSBuildThisFileDirectory)native\win-x64\wren.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>runtimes/win-x64/native</PackagePath>
+            <Pack>true</Pack>
+        </Content>
+    </ItemGroup>
+</Project>
