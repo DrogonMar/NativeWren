@@ -11,9 +11,9 @@
         <PackageProjectUrl>https://github.com/DrogonMar/NativeWren</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/DrogonMar/NativeWren/blob/main/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/DrogonMar/NativeWren</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
         <PackageTags>Wren</PackageTags>
         <Company>DrogonMar</Company>
+        <Version>1.0.1</Version>
     </PropertyGroup>
     <ItemGroup>
         <Content Include="$(MSBuildThisFileDirectory)native\linux-x64\libwren.so">

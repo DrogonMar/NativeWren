@@ -40,6 +40,10 @@ public partial class Wren
         {
             nativeFolder = $"linux-" + RuntimeInformation.ProcessArchitecture.ToString().ToLower();
             libraryName = "libwren.so";
+        }else if (OperatingSystem.IsWindows())
+        {
+            nativeFolder = $"win-" + RuntimeInformation.ProcessArchitecture.ToString().ToLower();
+            libraryName = "wren.dll";
         }
         else
         {
@@ -49,8 +53,9 @@ public partial class Wren
         var libPath = Path.Combine(
             Path.GetDirectoryName(
                 Assembly.GetExecutingAssembly().Location)!,
-            "native",
+            "runtimes",
             nativeFolder,
+            "native",
             libraryName);
 
         if (!NativeLibrary.TryLoad(libPath, out _internalWrenLibPtr))
